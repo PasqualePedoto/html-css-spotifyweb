@@ -1,0 +1,103 @@
+/* RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Utils */
+
+.container{
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+.border-blue{
+    border: 1px solid blue
+}
+
+.display-flex{
+    display: flex;
+}
+
+/* In questo modo fissiamo la
+dimensione della web application
+uguale al 100% della viewport */
+
+/* Non consentiamo lo scroll 
+laterale */
+
+body{
+    overflow-y: hidden;
+}
+
+/* Per far si che la dimensione in height sia 
+sempre uguale alla viewport definiamo la 
+dimensione del blocco contenente main, header e
+navbar */
+
+body > div:first-child{
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
+}
+
+/*
+ SIDEBAR
+ */
+
+ #sidebar{
+     flex-basis: 20%;
+     height: 100%;
+     background-color: lightblue;
+ }
+
+#main{
+    flex-basis: 80%;
+
+    /* Abbiamo calcolato in questo modo 
+    l'altezza del main in modo tale da dare
+    una dimensione precisa che entrasse 
+    all'interno della viewport così da
+    fissare correttamente la scroll-bar */
+
+    height: calc(100vh - 100px);
+    background-color: lightsalmon;
+
+    /* Scroll-bar inserita */
+    overflow-y: auto;
+}
+
+/*
+HEADER 
+ */
+
+ #main header{
+     position: sticky;
+     top: 0;
+     width: 100%;
+    
+
+     height: 50px;
+     padding: 10px;
+
+     background-color: orange;
+
+     box-shadow: 1px 3px 3px #999;
+ }
+
+/*
+ FOOTER
+ */
+
+ footer{
+     background-color: blue;
+     height: 100px;
+
+     z-index: 4;
+ }
