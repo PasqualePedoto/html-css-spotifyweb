@@ -239,6 +239,20 @@ HEADER
 }
 
 /*
+POPULAR ARTISTS SECTION
+*/
+
+/* In questo caso le img delle 
+cards avranno un bordo non squadrato
+ma rotondo
+ */
+
+ #popular-artists img{
+    border-radius: 50%;
+    object-fit: cover;
+ }
+
+/*
  FOOTER
  */
 
