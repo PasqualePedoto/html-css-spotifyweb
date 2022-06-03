@@ -1,0 +1,75 @@
+/* RESPONSIVE 576 PX */
+
+@media screen and (max-width: 576px) {
+    
+    /* Modifichiamo la dimensione del display */
+
+    .container{
+        max-width: 576px;
+    }
+    
+    /* Centriamo l'icona fa-square */
+
+    .auto{
+        margin: 0 auto;
+    }
+
+
+    #recently-played .row{
+        flex-wrap: wrap;
+    }
+
+    #recently-played .column{
+        width: calc(100% / 2 - .5rem);
+    }
+
+    #main li{
+        font-size: 8px;
+
+        max-width: 50px;
+    }
+
+    /* Faccio scomparire la scritta
+    perchè altrimenti si stropiccia 
+    troppo */
+
+    #create-playlist span{
+        display: none;
+    }
+
+    /* Cambiamo le grandezze delle barre a scorrimento */
+
+    #music-bar{
+        width: 50px;
+    }
+   
+    #current-bar{
+       width: 20px;
+    }
+   
+   #sound-bar{
+        width: 40px;
+   }
+   
+   #current-soundbar{
+      width: 20px;
+   }
+
+   /* Togliamo le scritte e aumentiamo il font delle icone*/
+
+   .search{
+    display: none;
+    }
+
+    .fa-house,
+    .fa-magnifying-glass,
+    .fa-swatchbook{
+        font-size: 20px;
+    }
+
+    #sidebar nav li,
+    #sidebar #create-playlist li{
+        text-align: center;
+    }
+
+}

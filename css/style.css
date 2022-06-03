@@ -299,7 +299,7 @@ NAV MAIN
 */
 
 #main nav{
-    padding: 10px 100px;
+    padding: 10px 30px;
 
     text-align: center;
     margin: 0 auto;
@@ -312,6 +312,8 @@ NAV MAIN
 
 #main li{
     font-size: 12px;
+    
+    max-width: 200px;
 }
 
 /* 
@@ -430,5 +432,6 @@ footer hr{
 #current-soundbar{
     height: 3px;
     width: 60px;
+
     background-color: white;
 }
