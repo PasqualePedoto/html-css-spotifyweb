@@ -7,6 +7,20 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Eliminiamo la linea orizzontale sotto i 
+link */
+
+a{
+    text-decoration: none;
+}
+
+/* Adattiamo le immagini alla grandezza dei
+blocchi che li contengono */
+
+img{
+    max-width: 100%;
+}
+
 /* Utils */
 
 .container{
@@ -22,8 +36,52 @@
     border: 1px solid blue
 }
 
+.text-center{
+    text-align: center;
+}
+
+.btn{
+    display: block;
+
+    width: 200px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px;
+
+    font-size: 15px;
+
+    /* Centriamo il testo nel button */
+
+    text-align: center;
+}
+
+/* 
+MARGIN
+*/
+
+.marg-b-20{
+    margin-bottom: 20px;
+}
+
+.marg-b-10{
+    margin-bottom: 10px;
+}
+
+/*
+ FLEX UTILS
+ */
+
 .display-flex{
     display: flex;
+}
+
+.content-right{
+    justify-content: flex-end;
+}
+
+.align-center{
+    align-items: center;
 }
 
 /* In questo modo fissiamo la
@@ -82,14 +140,80 @@ HEADER
      top: 0;
      width: 100%;
     
+    /* L'altezza dell'header è fondamentale 
+    perchè è un requisito di calcolo che determina
+    la misura precisa dei contenuti principali
+    del main, in modo tale che scrollino. */
 
      height: 50px;
      padding: 10px;
 
-     background-color: orange;
+     background-color: #444;
 
      box-shadow: 1px 3px 3px #999;
  }
+
+ /* Definiamo il bottone presente nell'header */
+
+ header a{
+     border: 1px solid white;
+
+     background-color: transparent;
+     color: white;
+ }
+
+ /*
+  AREA CONTENUTI PRINCIPALI
+ */
+
+ /* Setting delle section */
+
+ section{
+     padding: 30px 10px;
+ }
+
+ /* Costruiamo la struttura flex per contenere
+ le cards */
+
+ /* Dando padding alle colonne e margin negativo
+ al contenitore flex definiamo a nostro piacimento
+ lo spessore del gutter */
+
+ .row{
+     display: flex;
+
+     margin: 0 -0.5rem;
+ }
+
+ .column{
+     padding: 0.5rem 0.5rem;
+
+     max-width: 150px;
+     min-height: 150px;
+ }
+
+ /* Descrizione delle cards */
+
+ .column .description{
+     text-align: center;
+     
+     /* Abbiamo fissato una max-width
+     poichè altrimenti, all'aumentare
+     del testo aumenta la grandezza del
+     blocco e di conseguenza anche la foto
+      */
+     max-width: 150px;
+ }
+
+ .column .description p{
+     color: gray;
+     font-size: 12px;
+}
+
+.column .description h3{
+    color: white;
+    font-size: 15px;
+}
 
 /*
  FOOTER
@@ -99,5 +223,5 @@ HEADER
      background-color: blue;
      height: 100px;
 
-     z-index: 4;
+     z-index: 5;
  }
