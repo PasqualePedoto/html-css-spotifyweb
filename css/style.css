@@ -76,6 +76,10 @@ img{
     text-align: center;
 }
 
+.inline-block{
+    display: inline-block;
+}
+
 /* 
 MARGIN
 */
@@ -94,6 +98,14 @@ MARGIN
 
 .marg-t-10{
     margin-top: 10px;
+}
+
+.marg-r-10{
+    margin-right: 10px;
+}
+
+.marg-l-10{
+    margin-left: 10px;
 }
 
 /* 
@@ -116,6 +128,14 @@ PADDING
     display: flex;
 }
 
+.direction-column{
+    flex-direction: column;
+}
+
+.align-content{
+    align-content: center;
+}
+
 .content-right{
     justify-content: flex-end;
 }
@@ -126,6 +146,10 @@ PADDING
 
 .stretch{
     align-items: stretch;
+}
+
+.content-center{
+    justify-content: center;
 }
 
 /* In questo modo fissiamo la
@@ -383,4 +407,28 @@ footer hr{
     padding: 0 10px;
  }
 
+ #music-bar{
+     height: 3px;
+     width: 300px;
 
+     background-color: #555;
+ }
+
+ #current-bar{
+    height: 3px;
+    width: 200px;
+    background-color: white;
+ }
+
+#sound-bar{
+    height: 3px;
+    width: 100px;
+
+     background-color: #555;
+}
+
+#current-soundbar{
+    height: 3px;
+    width: 60px;
+    background-color: white;
+}
