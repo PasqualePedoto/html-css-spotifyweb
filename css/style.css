@@ -14,6 +14,19 @@ a{
     text-decoration: none;
 }
 
+/* Colore per paragraph e title
+2 e 3*/
+
+p{
+    color: gray;
+    font-size: 12px;
+}
+
+h3
+,h2{
+    color: white;
+}
+
 /* Adattiamo le immagini alla grandezza dei
 blocchi che li contengono */
 
@@ -60,12 +73,24 @@ img{
 MARGIN
 */
 
+.marg-b-5{
+    margin-bottom: 5px;
+}
+
 .marg-b-20{
     margin-bottom: 20px;
 }
 
 .marg-b-10{
     margin-bottom: 10px;
+}
+
+/* 
+PADDING
+*/
+
+.pad-t-20{
+    padding-top: 20px;
 }
 
 /*
@@ -196,7 +221,7 @@ HEADER
 
  .column .description{
      text-align: center;
-     
+
      /* Abbiamo fissato una max-width
      poichè altrimenti, all'aumentare
      del testo aumenta la grandezza del
@@ -206,12 +231,10 @@ HEADER
  }
 
  .column .description p{
-     color: gray;
      font-size: 12px;
 }
 
 .column .description h3{
-    color: white;
     font-size: 15px;
 }
 
