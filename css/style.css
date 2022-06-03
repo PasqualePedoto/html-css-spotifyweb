@@ -14,6 +14,12 @@ a{
     text-decoration: none;
 }
 
+/* Abbaimo eliminato il pallino dell'ul */
+
+ul{
+    list-style-type: none;
+}
+
 /* Colore per paragraph e title
 2 e 3*/
 
@@ -22,8 +28,9 @@ p{
     font-size: 12px;
 }
 
-h3
-,h2{
+h3,
+h2,
+a{
     color: white;
 }
 
@@ -85,9 +92,17 @@ MARGIN
     margin-bottom: 10px;
 }
 
+.marg-t-10{
+    margin-top: 10px;
+}
+
 /* 
 PADDING
 */
+
+.pad-r-5{
+    padding-right: 5px;
+}
 
 .pad-t-20{
     padding-top: 20px;
@@ -107,6 +122,10 @@ PADDING
 
 .align-center{
     align-items: center;
+}
+
+.stretch{
+    align-items: stretch;
 }
 
 /* In questo modo fissiamo la
@@ -136,7 +155,6 @@ body > div:first-child{
 
  #sidebar{
      flex-basis: 20%;
-     height: 100%;
      background-color: lightblue;
  }
 
@@ -150,7 +168,7 @@ body > div:first-child{
     fissare correttamente la scroll-bar */
 
     height: calc(100vh - 100px);
-    background-color: lightsalmon;
+    background-color: #333;
 
     /* Scroll-bar inserita */
     overflow-y: auto;
@@ -173,9 +191,9 @@ HEADER
      height: 50px;
      padding: 10px;
 
-     background-color: #444;
+     background-color: #555;
 
-     box-shadow: 1px 3px 3px #999;
+     box-shadow: 1px 3px 3px #777;
  }
 
  /* Definiamo il bottone presente nell'header */
@@ -253,12 +271,116 @@ ma rotondo
  }
 
 /*
+NAV MAIN
+*/
+
+#main nav{
+    padding: 10px 100px;
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#main li{
+    font-size: 12px;
+}
+
+/* 
+SIDEBAR
+*/
+
+#sidebar{
+    padding: 10px;
+    height: calc(100vh - 100px);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #222;
+    color: gray;
+}
+
+#sidebar figure{
+    max-width: 120px;
+
+    display: block;
+}
+
+#sidebar li{
+    margin-bottom: 5px;
+}
+
+#sidebar a
+,li{
+    color: gray;
+}
+
+/* Insieme delle playlist, per realizzare
+ciò che ci è stato richiesto impostiamo 
+il problema allo stesso modo di come abbiamo 
+strutturato la pagina inizialmente:
+diamo una dimensione fissa e poi facciamo
+scollare */
+
+#sidebar #more-playlist{
+    height: 150px;
+    overflow-y: auto;
+}
+
+/* Realizziamo una struttura ad hoc in modo
+tale che si centrino correttamente icona
+e testo */
+
+#create-playlist{
+    min-height: 25px;
+}
+
+#sidebar > div:first-child{
+    flex-basis: 90%;
+}
+
+footer hr{
+    margin: 5px 0 10px 0;
+    background-color: white;
+}
+
+/*
  FOOTER
  */
 
- footer{
-     background-color: blue;
+#website-footer{
+     background-color: #777;
+     color: white;
+
      height: 100px;
+     padding: 20px 10px;
 
      z-index: 5;
+
+     display: flex;
+     justify-content: space-between;
+     align-content: center;
  }
+
+ #website-footer p{
+     color: #555;
+     font-weight: bold;
+ }
+
+ #player-img{
+     max-width: 50px;
+ }
+
+ .player-description{
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+ }
+
+
