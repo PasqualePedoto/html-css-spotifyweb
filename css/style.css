@@ -29,8 +29,7 @@ p{
 }
 
 h3,
-h2,
-a{
+h2{
     color: white;
 }
 
@@ -64,22 +63,39 @@ img{
     display: block;
 
     width: 200px;
-    height: 40px;
+    height: 30px;
     border: 1px solid white;
     border-radius: 25px;
     padding: 10px;
 
-    font-size: 15px;
+    font-size: 12px;
 
     /* Centriamo il testo nel button */
 
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* TRANSITION */
+
+    transition: width 0.2s, font-size 0.2s, heigth 0.2s;
 }
 
 .inline-block{
     display: inline-block;
 }
 
+.gray{
+    color: gray;
+}
+
+.white{
+    color: white;
+}
+
+.l-gray{
+    color: lightgray;
+}
 /* 
 MARGIN
 */
@@ -173,15 +189,6 @@ body > div:first-child{
     overflow-y: hidden;
 }
 
-/*
- SIDEBAR
- */
-
- #sidebar{
-     flex-basis: 20%;
-     background-color: lightblue;
- }
-
 #main{
     flex-basis: 80%;
 
@@ -229,6 +236,14 @@ HEADER
      color: white;
  }
 
+ /* HOVER BTN */
+
+ header a:hover{
+     width: 220px;
+     height: 40px;
+     font-size: 14px;
+ }
+
  /*
   AREA CONTENUTI PRINCIPALI
  */
@@ -272,12 +287,66 @@ HEADER
      max-width: 150px;
  }
 
+ /************* HOVER CARD ************/
+
+ /* Serve da riferimento per il play-btn */
+
+ .card{
+     position: relative;
+ }
+
+ /* Button play */
+
+ .play-btn{
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    display: none;
+
+    color: white;
+ }
+
+ /* HOVER ATTIVATION */
+
+ #recently-played .card:hover .play-btn{
+    display: block;
+ }
+
+ #recently-played .card:hover{
+    filter: opacity(0.6);
+ }
+
  .column .description p{
      font-size: 12px;
 }
 
 .column .description h3{
     font-size: 15px;
+}
+
+/*************** HOVER SEARCH ***************/
+
+/* 
+Le ricerche e le voci della sidebar si 
+colorano di bianco quando sono in hover 
+*/
+
+#main li:hover a,
+#sidebar li:hover a,
+#sidebar footer a:hover,
+#create-playlist:hover div a,
+#create-playlist:hover div span,
+.fa-folder:hover,
+.fa-heart:hover{
+    color: white
+}
+
+.player-description > div p:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /*
@@ -299,10 +368,12 @@ NAV MAIN
 */
 
 #main nav{
-    padding: 10px 30px;
+    padding: 10px 20px;
+}
 
-    text-align: center;
-    margin: 0 auto;
+#main nav ul{
+    display: flex;
+    justify-content: space-between;
 }
 
 #main ul{
@@ -323,6 +394,8 @@ SIDEBAR
 #sidebar{
     padding: 10px;
     height: calc(100vh - 100px);
+    flex-basis: 20%;
+    flex-shrink: 0;
 
     display: flex;
     flex-direction: column;
@@ -333,8 +406,15 @@ SIDEBAR
 
 #sidebar figure{
     max-width: 120px;
-
     display: block;
+}
+
+/* Small-logo comparirà solo ad una determinata
+dimensione del layout */
+
+#small-logo{
+    display: none;
+    text-align: center;
 }
 
 #sidebar li{
@@ -420,6 +500,8 @@ footer hr{
     height: 3px;
     width: 200px;
     background-color: white;
+
+    position: relative;
  }
 
 #sound-bar{
@@ -434,4 +516,33 @@ footer hr{
     width: 60px;
 
     background-color: white;
+
+    position: relative;
 }
+
+/* Pallina che si muove sulla bar */
+
+.red-ball{
+    background-color: red;
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+
+    display: none;
+}
+
+#current-soundbar:hover .red-ball,
+#current-bar:hover .red-ball{
+    display: block;
+}
+
+

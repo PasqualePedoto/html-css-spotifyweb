@@ -7,11 +7,24 @@
     .container{
         max-width: 576px;
     }
+
+    .d-none-576{
+        display: none;
+    }
     
-    /* Centriamo l'icona fa-square */
+    /* Centriamo l'icona fa-square
+    e il logo di spotify */
 
     .auto{
         margin: 0 auto;
+    }
+
+    #sidebar figure{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 15px;
     }
 
 
@@ -23,10 +36,39 @@
         width: calc(100% / 2 - .5rem);
     }
 
-    #main li{
-        font-size: 8px;
+    /* Cambiamo la disposizione della
+    nav nel main */
 
-        max-width: 50px;
+    #main nav ul{
+        flex-wrap: wrap;
+
+        margin: 0 -0.125rem;
+    }
+    
+
+    #main li{
+        font-size: 10px;
+
+        padding: 0.5rem 0.125rem;
+        width: calc(100% / 3 - 0.125rem);
+    }
+
+    .disposition{
+        margin: 0;
+        display: inline-block;
+    }
+
+    /* Facciamo comparire il logo
+    più piccolo e scomparire quello
+    grande */
+
+    #small-logo{
+        display: block;
+        max-width: 30px;
+    }
+
+    #logo{
+        display: none;
     }
 
     /* Faccio scomparire la scritta

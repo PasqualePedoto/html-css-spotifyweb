@@ -8,10 +8,40 @@
         max-width: 768px;
     }
 
-    /* Centriamo l'icona fa-square */
+    /* Centriamo l'icona fa-square
+    e il logo di spotify */
 
     .auto{
         margin: 0 auto;
+    }
+
+    /* Cambiamo la disposizione della
+    nav nel main */
+
+    #main nav ul{
+        flex-wrap: wrap;
+
+        margin: 0 -0.125rem;
+    }
+    
+
+    #main li{
+        font-size: 10px;
+        text-align: center;
+
+        padding: 0.5rem 0.125rem;
+        width: calc(100% / 5 - 0.125rem);
+    }
+
+    .disposition{
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Diamo aria al logo */
+
+    #sidebar figure{
+        margin-bottom: 15px;
     }
 
     #recently-played .row{
