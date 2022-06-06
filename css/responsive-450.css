@@ -1,0 +1,65 @@
+/* RESPONSIVE 450PX */
+
+@media screen and (max-width: 450px){
+
+    .container{
+        max-width: 450px;
+    }
+
+    /* Rendiamo la sidebar molto più piccola */
+
+    #sidebar{
+        width: 40px;
+    }
+
+    /* Facciamo comparire il logo
+    più piccolo e scomparire quello
+    grande */
+
+    #small-logo{
+        display: block;
+        max-width: 30px;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    /* Facciamo scomparire le scritte a fianco
+     ai loghi nella sidebar */
+
+     #sidebar nav span,
+     .d-none-smatphone,
+     #sidebar footer span,
+     #sidebar footer hr{
+        display: none;
+     }
+
+     /* Centriamo le icone del footer */
+
+     #sidebar footer{
+         text-align: center;
+     }
+
+     /* Diamo aria a queste icone */
+
+     .fa-user,
+     .fa-arrow-down{
+        margin-bottom: 10px;
+     }
+
+     /* Adattiamo il player */
+
+     #music-bar{
+         width: 50px;
+     }
+
+     #current-bar{
+         width: 20px;
+     }
+
+     #website-footer{
+         font-size: 10px;
+     }
+    
+}

@@ -20,10 +20,6 @@
     }
 
     #sidebar figure{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         margin-bottom: 15px;
     }
 
@@ -58,27 +54,6 @@
         display: inline-block;
     }
 
-    /* Facciamo comparire il logo
-    più piccolo e scomparire quello
-    grande */
-
-    #small-logo{
-        display: block;
-        max-width: 30px;
-    }
-
-    #logo{
-        display: none;
-    }
-
-    /* Faccio scomparire la scritta
-    perchè altrimenti si stropiccia 
-    troppo */
-
-    #create-playlist span{
-        display: none;
-    }
-
     /* Cambiamo le grandezze delle barre a scorrimento */
 
     #music-bar{
@@ -96,22 +71,5 @@
    #current-soundbar{
       width: 20px;
    }
-
-   /* Togliamo le scritte e aumentiamo il font delle icone*/
-
-   .search{
-    display: none;
-    }
-
-    .fa-house,
-    .fa-magnifying-glass,
-    .fa-swatchbook{
-        font-size: 20px;
-    }
-
-    #sidebar nav li,
-    #sidebar #create-playlist li{
-        text-align: center;
-    }
 
 }
