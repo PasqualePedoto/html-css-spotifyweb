@@ -12,6 +12,14 @@
         width: 40px;
     }
 
+    /* Cambiamo la disposizione della
+    navbar in main */
+
+    #main li{
+        font-size: 7px;
+        padding: 0.5rem 0.125rem;
+        width: calc(100% / 4 - 0.125rem);
+    }
     /* Facciamo comparire il logo
     più piccolo e scomparire quello
     grande */
